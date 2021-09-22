@@ -5,8 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,7 +28,22 @@ public class MainActivity extends AppCompatActivity {
         Button btn = findViewById(R.id.button);
         btn.setText("The view was previously "+ oldText);
         btn.setOnClickListener( ( v ) -> {topView.setText("Edit text has " +  bottom.getText());} );
+        CheckBox cb = findViewById(R.id.checkbox);
+        RadioButton radio = findViewById(R.id.radio);
+        Switch sw = findViewById(R.id.sw);
 
+        sw.setOnCheckedChangeListener((btn, onOrOff) -> {
+            radio.setChecked(onOrOff);
+            Toast.makeText(MainActivity.this, "You clicked on switch", Toast.LENGTH_LONG).show();
+
+        });
+        cb.setOnCheckedChangeListener(( b, c) -> {
+            Toast.makeText(MainActivity.this, "You clicked on checkbox", Toast.LENGTH_SHORT).show();
+            if(c)
+                radio.setChecked(true);
+            else
+                radio.setChecked(false);
+        });
     }
 
 
