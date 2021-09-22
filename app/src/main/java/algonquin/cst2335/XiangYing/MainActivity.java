@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        TextView topView= findViewById(R.id.textview);
+        TextView topView= findViewById(R.id.bottom);
         String oldText = topView.getText().toString();
         topView.setText("Java put this here");
 
@@ -22,17 +22,10 @@ public class MainActivity extends AppCompatActivity {
 
         Button btn = findViewById(R.id.button);
         btn.setText("The view was previously "+ oldText);
-        btn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                topView.setText("Edit text has " + bottom.getText())
-            }
+        btn.setOnClickListener( ( v ) -> {topView.setText("Edit text has " +  bottom.getText());} );
 
-                               }
-
-        )
-                }
-        );
-       ;
     }
+
+
 }
+
