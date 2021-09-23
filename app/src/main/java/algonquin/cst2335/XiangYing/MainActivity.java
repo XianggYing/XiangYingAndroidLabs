@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         RadioButton radio = findViewById(R.id.radio);
         Switch sw = findViewById(R.id.sw);
 
-        sw.setOnCheckedChangeListener((btn, onOrOff) -> {
+        sw.setOnCheckedChangeListener((button, onOrOff) -> {
             radio.setChecked(onOrOff);
             Toast.makeText(MainActivity.this, "You clicked on switch", Toast.LENGTH_LONG).show();
 
