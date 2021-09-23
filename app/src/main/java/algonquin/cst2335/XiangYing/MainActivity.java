@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -43,6 +44,11 @@ public class MainActivity extends AppCompatActivity {
                 radio.setChecked(true);
             else
                 radio.setChecked(false);
+        });
+        ImageButton ib = findViewById(R.id.button4);
+        ib.setOnClickListener((vw) ->{
+            int width = ib.getWidth();
+            int height = vw.getHeight();
         });
     }
 
