@@ -18,7 +18,7 @@ Switch sw;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         imgView = findViewById(R.id.flagview);
-        sw = findViewById(R.id.switch1);
+        sw = findViewById(R.id.spin_switch);
 
         sw.setOnCheckedChangeListener( (btn, isChecked) -> {
             if (isChecked)
