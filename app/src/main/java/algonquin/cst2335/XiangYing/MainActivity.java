@@ -127,11 +127,13 @@ public class MainActivity extends AppCompatActivity {
 
                         }
                     }
-                    /*
+
                     text = (new BufferedReader(
                             new InputStreamReader(in, StandardCharsets.UTF_8)))
                             .lines()
                             .collect(Collectors.joining("\n"));
+
+                    /*
                     JSONObject theDocument = new JSONObject( text ); //this converts the String to JSON Object. The whole page!!
                     JSONObject main = theDocument.getJSONObject("main");
                     JSONArray weatherArray = theDocument.getJSONArray("weather");
